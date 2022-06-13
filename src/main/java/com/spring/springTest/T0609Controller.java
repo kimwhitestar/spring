@@ -172,11 +172,11 @@ public class T0609Controller {
 		return mv;
 	}
 	
-//	@RequestMapping(value="/test8_3_11", method=RequestMethod.POST)
+//	@RequestMapping(value="/test8_3_11", method=RequestMethod.GET)
 //	public String test8_3_11Post(Model model, 
-//			@RequestParam(id="id", defaultValue="", required=true) String id,
-//			@RequestParam(password="password", defaultValue="", required=true) String password,
-//			@RequestParam(email="email", defaultValue="", required=true) String email) {
+//		@RequestParam(id="id", defaultValue="", required=true) String id,
+//		@RequestParam(password="password", defaultValue="", required=true) String password,
+//		@RequestParam(email="email", defaultValue="", required=true) String email) {
 //
 //		model.addAttribute("id", id+"security5");
 //		model.addAttribute("password", password+"security5");
