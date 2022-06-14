@@ -1,0 +1,23 @@
+자바버전 : 1.8
+스프링버전 : 4.3.14
+lombok1.18.12
+메이븐 : 소스1.8, 타겟1.8
+
+Spring Legacy Project
+개발툴 : eclipse market에서 sts4.4.14 스프링개발툴 다운받아서 설치 후 , eclipse는 종료하고 sts툴 open후 개발
+
+sts 시작 -> eclipse market에서 spring 툴 2개 (녹색, 갈색) install 후 재시작
+spring tools3 Add-On for Spring Tools 4 ( 3.9.22RELEASE ) --- 수업시간에 다운받았던 3.9.21? 3.9.19? 가 없다
+eclipse enterprise Java and Web Developer Tools 3.25 ~ (JSP)지원되는 툴로 설치  --- 수업시간에 다운받았던 3.21이 없다ㅜㅜ
+
+sts 시작 -> spring legacy project 새로 만들기 -> spring mvc 선택할 때 프로젝트 이름 공란 -> 다음 -> 프로젝트명(atom) -> 다음 -> 패키지명(com.spring.atom) -> 완료
+
+pom.xml 자동생성되면 -> 위의 버전대로 자바,스프링,메이븐버전 수정 -> maven update
+
+Lombok lib 설치
+https://mvnrepository.com/artifact/org.projectlombok/lombok/1.18.12에서 복사해서 pom.xml 의존성 추가 후 maven update로 설치하면, 
+프로젝트에서 라이브러리폴더에 jar화일 추가되고 그 것을 아래처럼 실행 설치
+lombok-1.18.12.jar 파일에서 오른쪽 버튼 -> run as -> java application 실행 후 설치 -> sts 재시작
+
+개발 소스 작성 
+servlet-context.xml(컨트롤러와 jsp사이의 매핑주소 작성시, 컨트롤러에서 매핑주소를 짧게 작성하도록, 여기서 주소의 앞(매핑주소 앞자리 자른 것)과 뒤이름(jsp화일명 중 확장자'jsp'만)을 잘라서 작성하고, 컨트롤러에서는 중간 생략된 매핑주소를 간략히 작성), Controller('/url'로 이동해서 오도록 mapping주소 설정하고, 요청과 응답처리 내용작성하고, 확장자 자른 jsp화일명으로 디스패처 경로 반환하는 클래스), jsp화일 작성 
