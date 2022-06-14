@@ -46,6 +46,7 @@ https://mvnrepository.com/artifact/org.projectlombok/lombok/1.18.12에서 복사
 lombok-1.18.12.jar 파일에서 오른쪽 버튼 -> run as -> java application 실행 후 설치
 
 8. 데이터검증 추가 maven repository -> Hibernate Validator Engine » 6.2.0.Final (버전은 꼭 맞추기) -> pom.xml추가 -> maven update
+에러나거든 6.2.2.Final 버전은 되던데...
 
 9. DB 연결 추가 maven repository에서 아래6개 조회 -> pom.xml추가 -> maven update
 <!-- Mybatis 3.5.7 -->
