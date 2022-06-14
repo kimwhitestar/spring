@@ -14,12 +14,9 @@
 		</h1>
 		
 		<P>  The time on the server is ${serverTime}. </P>
-		<hr/>
-		<p>
-			<a href="${ctxPath}/user/userLogin" class="btn btn-secondary">로그인</a>
-			<a href="${ctxPath}/validator/validatorForm" class="btn btn-secondary">validator 연습</a>
-			<a href="${ctxPath}/user/userList" class="btn btn-secondary">user목록 DB연습</a>
-		</p>
+		<a href="${ctxPath}/tiles/login" class="btn btn-secondary">로그인</a>
+		<a href="${ctxPath}/validator/validatorForm" class="btn btn-secondary">validator 연습</a>
+		<a href="${ctxPath}/user/userList" class="btn btn-secondary">user목록 DB연습</a>
 	</div>
 </body>
 </html>

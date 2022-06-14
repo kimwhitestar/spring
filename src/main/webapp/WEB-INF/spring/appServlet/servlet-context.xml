@@ -42,4 +42,42 @@
 		</beans:property>
 	</beans:bean>
 	
+	<!-- Interceptor 설정 -->
+	<beans:bean id="testInterceptor" class="com.spring.springTest.interceptor.TestInterceptor" />
+	<beans:bean id="guestInterceptor" class="com.spring.springTest.interceptor.GuestInterceptor" />
+	<beans:bean id="boardInterceptor" class="com.spring.springTest.interceptor.BoardInterceptor" />
+	<beans:bean id="pdsInterceptor" class="com.spring.springTest.interceptor.PdsInterceptor" />
+	<beans:bean id="userInterceptor" class="com.spring.springTest.interceptor.UserInterceptor" />
+	<interceptors>
+		<interceptor >
+			<mapping path="/" />
+			<beans:ref bean="testInterceptor" /><!-- bean name이 bean id이다 -->	
+		</interceptor>
+		<interceptor >
+			<mapping path="/tiles/guest/**" />
+			<beans:ref bean="guestInterceptor" />
+		</interceptor>
+		<interceptor >
+			<mapping path="/tiles/board/**" />
+			<beans:ref bean="boardInterceptor" />
+		</interceptor>
+		<interceptor >
+			<mapping path="/tiles/pds/**" />
+			<beans:ref bean="pdsInterceptor" />
+		</interceptor>
+		<interceptor >
+			<mapping path="/user/**" />
+			<exclude-mapping path="/user/userLogin" /><!-- 제외 항목 -->
+			<exclude-mapping path="/user/userLogout" /><!-- 제외 항목 -->
+			<exclude-mapping path="/user/userList" /><!-- 제외 항목 -->
+			<beans:ref bean="userInterceptor" />
+		</interceptor>
+<!-- 		
+		<interceptor >
+			<mapping path="/tiles/user/userList" />
+			<beans:ref bean="userInterceptor" />
+		</interceptor>
+ -->
+ 	</interceptors>
+	
 </beans:beans>

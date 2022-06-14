@@ -29,6 +29,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
+			<!--  Legacy Project에서 Interceptor 사용할 때 필요 -->
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>

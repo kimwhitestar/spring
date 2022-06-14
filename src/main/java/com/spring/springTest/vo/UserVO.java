@@ -8,9 +8,11 @@ import org.hibernate.validator.constraints.Range;
 import lombok.Data;
 
 public @Data class UserVO {
+	private int level;
+
 	/*hibernate validator 체크*/
 	private int idx;    
-
+	
 	@NotNull(message="아이디를 입력하세요?")
 	@Length(min=4, max=20, message="아이디는 4자 ~ 20글자로 입력하세요")
 	@Pattern(regexp = "", message="입력규칙위반")
@@ -28,4 +30,5 @@ public @Data class UserVO {
 	@Length(min=1, max=20, message="주소는 1자 ~ 20글자로 입력하세요")
 	@Pattern(regexp = "", message="입력규칙위반")
 	private String address;
+	
 }

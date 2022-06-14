@@ -10,10 +10,23 @@
 </head>
 <body>
   <p><br></p>
-  Tiles 레이아웃이 적용된 화면입니다
   <hr/>
   <p>
-  	<a href="${ctxPath}/tiles/login">로그아웃</a>
+  	<c:if test="${0 == sLevel}"><c:set var="strLevel" value="관리자"/></c:if>
+  	<c:if test="${1 == sLevel}"><c:set var="strLevel" value="특별회원"/></c:if>
+  	<c:if test="${2 == sLevel}"><c:set var="strLevel" value="우수회원"/></c:if>
+  	<c:if test="${3 == sLevel}"><c:set var="strLevel" value="정회원"/></c:if>
+  	<c:if test="${4 == sLevel}"><c:set var="strLevel" value="준회원"/></c:if>
+  	${sName}님 로그인중입니다. (레벨 : ${strLevel})<br>
+  	<pre>
+		- 관리자(0)는 모든 서비스와 '관리자 메뉴' 사용
+		- 우수회원(2)/특별회원(1)은 '방명록,게시판,자료실,유저목록' 사용
+		- 정회원(3)은 '방명록,게시판,유저목록' 사용
+		- 준회원(4)은 '방명록' 사용
+		- 비회원(99)는 모든서비스 사용 금지(memberMain 접속불가) 
+  	</pre>
+  </p>
+  	<a href="${ctxPath}/user/userLogin">로그아웃</a>
   </p>
   <p><br></p>
 </body>

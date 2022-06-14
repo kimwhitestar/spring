@@ -18,10 +18,10 @@
   <p><br></p>
   	<h2>유저목록</h2>
   	<div>
-  		<input type="button" value="User등록" onclick="location.href='${ctxPath}/user/insertUser'"/>
+  		<input type="button" value="등록" onclick="location.href='${ctxPath}/user/insertUser'"/>
   	</div>
   	<table class="table table-hover">
-  		<tr>
+  		<tr class="table-dark text-dark">
   			<th>번호</th>
   			<th>아이디</th>
   			<th>성명</th>

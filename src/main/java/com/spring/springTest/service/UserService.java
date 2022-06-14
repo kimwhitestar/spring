@@ -10,4 +10,5 @@ public interface UserService {
 	public void deleteUser(int idx);
 	public void insertUser(UserVO vo);
 	public void updateUser(UserVO vo);
+	public UserVO getMidCheck(String mid);
 }

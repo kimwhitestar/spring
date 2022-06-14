@@ -17,5 +17,7 @@ public interface UserDAO {
 	public void insertUser(@Param(value = "vo") UserVO vo);
 
 	public void updateUser(@Param(value = "vo") UserVO vo);
+
+	public UserVO getMidCheck(@Param(value = "mid") String mid);
 	
 }

@@ -10,10 +10,13 @@
 </head>
 <body>
   <p style="text-align:left">
-  	<a href="#">홈으로</a> |
-  	<a href="#">방명록</a> |
-  	<a href="#">게시판</a> |
-  	<a href="#">자료실</a>
+  	<a href="${ctxPath}/">홈으로</a> |
+  	<a href="${ctxPath}/tiles/guest/guestList">방명록</a> |
+  	<a href="${ctxPath}/tiles/board/boardList">게시판</a> |
+  	<a href="${ctxPath}/tiles/pds/pdsList">자료실</a> |
+  	<a href="${ctxPath}/tiles/user/userList">유저목록</a> |
+  	<a href="${ctxPath}/tiles/user/userLogin">로그인</a> 
+  	<a href="${ctxPath}/tiles/user/userLogout">로그아웃</a> 
   </p>
 </body>
 </html>

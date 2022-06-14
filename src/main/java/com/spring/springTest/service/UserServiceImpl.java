@@ -39,4 +39,9 @@ public class UserServiceImpl implements UserService {
 	public void updateUser(UserVO vo) {
 		userDAO.updateUser(vo);
 	}
+
+	@Override
+	public UserVO getMidCheck(String mid) {
+		return userDAO.getMidCheck(mid);
+	}
 }

@@ -5,6 +5,9 @@
   
 <mapper namespace="com.spring.springTest.dao.UserDAO">
 <!-- 수정 <mapper namespace="org.mybatis.example.BlogMapper"></mapper> -->
+  <select id="getMidCheck" resultType="com.spring.springTest.vo.UserVO" >
+  	select * from user where mid = #{mid};
+  </select>
   <select id="getUserList" resultType="com.spring.springTest.vo.UserVO" >
   	select * from user order by idx desc;
   </select>
